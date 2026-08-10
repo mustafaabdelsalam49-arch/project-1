@@ -1283,6 +1283,8 @@ ul, ol {
   .hero-content {
     width: 100%;
     text-align: center;
+    margin-right: 0;
+    padding: 0 16px;
   }
 
   .hero-description {
@@ -1305,12 +1307,28 @@ ul, ol {
   }
 
   .hero-description {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .commitment-badge {
+    padding: 12px 16px;
     font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-bottom: 20px;
   }
 
   .hero-cta {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
+  }
+
+  .hero-phone {
+    font-size: 1.2rem;
+    margin-top: 20px;
   }
 
   .hero-cta .btn-primary,
