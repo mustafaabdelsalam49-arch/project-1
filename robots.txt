@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alalmaglealaminforsafty.com/sitemap.xml

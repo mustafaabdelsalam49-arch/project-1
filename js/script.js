@@ -11,7 +11,7 @@
 
     // Mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
-    const mobileNav = document.getElementById('mobileMenu');
+    const mobileNav = document.getElementById('mobileNav');
     const mobileNavOverlay = document.getElementById('mobileNavOverlay');
     const mobileNavClose = document.getElementById('mobileNavClose');
 
