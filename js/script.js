@@ -50,4 +50,30 @@
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
       observer.observe(el);
     });
+
+    // GA4 Event Tracking for Call and WhatsApp
+    document.addEventListener('click', function(e) {
+      const link = e.target.closest('a');
+      if (!link) return;
+      
+      const href = link.getAttribute('href');
+      
+      if (href && href.includes('wa.me')) {
+        if (typeof gtag === 'function') {
+          gtag('event', 'whatsapp_click', {
+            'event_category': 'Contact',
+            'event_label': 'WhatsApp Button'
+          });
+        }
+      }
+      
+      if (href && href.includes('tel:')) {
+        if (typeof gtag === 'function') {
+          gtag('event', 'call_click', {
+            'event_category': 'Contact',
+            'event_label': 'Phone Button'
+          });
+        }
+      }
+    });
   
