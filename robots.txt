@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alalmaglealaminforsafty.com/sitemap.xml
+Sitemap: https://mustafaabdelsalam49-arch.github.io/project-1/sitemap.xml
