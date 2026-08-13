@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-14L5YKZQYX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
+  
     gtag('config', 'G-14L5YKZQYX');
+    gtag('config', 'AW-18387518048');
   </script>
+
+  
 
 <link rel="preload" href="css/style.css" as="style">
   <meta charset="UTF-8">
@@ -36,6 +38,7 @@
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Al-Majal Al-Amin | المجال الأمن", "image": "https://almajal-safety.com/images/logo.jpg", "telephone": "00966560736334", "address": {"@type": "PostalAddress", "addressLocality": "Jeddah", "addressCountry": "SA"}}
   </script>
+
 </head>
 <body class="page-about">
 
@@ -278,5 +281,35 @@
       observer.observe(el);
     });
   </script>
+
+<script>
+(function () {
+  function sendAdsEvent(action, label) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', action, {
+        event_category: 'engagement',
+        event_label: label,
+        transport_type: 'beacon'
+      });
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest ? e.target.closest('a') : null;
+    if (!el) return;
+
+    var href = (el.getAttribute('href') || '').toLowerCase();
+
+    if (href.indexOf('tel:') === 0) {
+      sendAdsEvent('phone_click', href.replace('tel:', ''));
+    }
+
+    if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) {
+      sendAdsEvent('whatsapp_click', href);
+    }
+  });
+})();
+</script>
+
 </body>
 </html>
